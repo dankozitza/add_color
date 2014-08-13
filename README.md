@@ -10,6 +10,7 @@ Uage: perl add_color.pl [option] [filename]
     $ ./add_color.pl /text/file/with/custom_tags.txt
     $ ping localhost | ./add_color.pl
     $ perl add_color.pl -h | less -r
+    $ ./add_color.pl nginx_access.log
 
  params:
 

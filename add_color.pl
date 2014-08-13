@@ -19,10 +19,8 @@
 # configurable from the command line. so that people don't need to know
 # perl and sed just to configure the thing.
 #
-# currently this hash is configured to color lines of output 
-# from ping website.com
 my %modifications = (
-   cyan      => [ # color code wtf brohno
+   cyan      => [ # color code
       'POST', # regular expression
       'upload',
       ' \/tadcmd\.cgi.*tadcmd=\w',
@@ -88,8 +86,6 @@ foreach my $arg (@ARGV) {
       %modifications = ();
    }
 }
-
-
 
 my $cmd;
 
