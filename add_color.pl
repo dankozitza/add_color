@@ -15,9 +15,6 @@
 # any key found in this hash must also be a key in the %colors hash
 # Each key corresponds to an array of tags. Any time a tag is found
 # in a line that line will be wrapped in the appropriate color code.
-# feel free to modify this hash. At some point i would like to make this
-# configurable from the command line. so that people don't need to know
-# perl and sed just to configure the thing.
 #
 my %modifications = (
    cyan      => [ # color code
