@@ -1,17 +1,5 @@
 #!/usr/bin/perl
 
-#print "\$0: [$0]\n\n";
-#foreach my $key (keys %ENV) {
-#   print "\$ENV{$key}: [$ENV{$key}]\n";
-#}
-#print "\n";
-#foreach my $key (keys %SIG) {
-#   print "\$SIG{$key}: [$SIG{$key}]\n";
-#}
-#print "\n\$^X: [$^X]\n";
-#print "\n\$\$: [" . $$ . "]\n";
-#system("ps -ef | grep \"| add_color.pl\"");
-
 # any key found in this hash must also be a key in the %colors hash
 # Each key corresponds to an array of tags. Any time a tag is found
 # in a line that line will be wrapped in the appropriate color code.
@@ -91,15 +79,19 @@ if ($ARGV[0] eq "-h" || $ARGV[0] eq "--help") {
    $modifications{cyan} = [".*"];
    $modifications{green} = [":"];
 
-   my $help_msg = "Usage: perl add_color.pl [option] [filename]\n\n"
-      . " ----- add_color:\n\n"
+   if ($0 =~ /.*\/(.+)$/) {
+      $prog = $1;
+   }
+
+   my $help_msg = "Usage: perl $prog [option] [filename]\n\n"
+      . " ----- $prog:\n\n"
       . " takes a stream or a filename as input and outputs with ansi color\n"
       . " codes added to individual lines of text.\n\n"
       . " example use:\n\n"
-      . "    \$ ./add_color.pl /text/file/with/custom_tags.txt\n"
-      . "    \$ ping localhost | ./add_color.pl\n"
-      . "    \$ perl add_color.pl -h | less -r\n"
-      . "    \$ ./add_color.pl nginx_access.log\n\n"
+      . "    \$ ./$prog /text/file/with/custom_tags.txt\n"
+      . "    \$ ping localhost | ./$prog\n"
+      . "    \$ perl $prog -h | less -r\n"
+      . "    \$ ./$prog nginx_access.log\n\n"
       . " params:\n\n"
       . "    -h --help   print this message\n\n"
       . "    -c --clear  clear the built in color settings\n\n"
