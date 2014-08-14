@@ -102,7 +102,7 @@ if ($ARGV[0] eq "-h" || $ARGV[0] eq "--help") {
       . " notes:\n\n"
       . "    usually i use this to highlight certain messages in logs.\n"
       . "    By piping the output of this script into less -r you can get\n"
-      . "    a much nicer ui for analyzing logs. only use this if you are\n"
+      . "    a much nicer ui for analyzing logs. only do this if you are\n"
       . "    giving a file name as input\n\n"
       . "    You can configure this script by modifying it manually. The \n"
       . "    \%modifications hash is used to set regular expressions.\n"

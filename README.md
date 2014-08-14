@@ -28,7 +28,7 @@ Usage: perl add_color.pl [option] [filename]
 
     usually i use this to highlight certain messages in logs.
     By piping the output of this script into less -r you can get
-    a much nicer ui for analyzing logs. only use this if you are
+    a much nicer ui for analyzing logs. only do this if you are
     giving a file name as input
 
     You can configure this script by modifying it manually. The 
